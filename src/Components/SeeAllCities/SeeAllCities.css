@@ -1,0 +1,20 @@
+.see-all-cities-container {
+    text-align: center;
+}
+
+.see-all-cities-container h2{
+    margin: 40px;
+
+}
+
+.see-all-cities-button {
+    height: 48px;
+    width: 200px;
+    background-color: #3A5295;
+    border: #3A5295;
+    border-radius: 12px;
+
+    color: #FFFFFF;
+    font-size: 20px;
+    margin: 48px 0 80px 0;
+}

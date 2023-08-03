@@ -1,0 +1,71 @@
+.compare-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.compare-student-homes {
+    height: 488px;
+    width: 1280px;
+    background-color: #F6FAFD;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 24px;
+
+}
+
+.compare-student-homes h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.compare-search {
+    width: 360px;
+    text-align: center;
+}
+
+.compare-compare {
+    width: 360px;
+    text-align: center;
+}
+
+.compare-bills {
+    width: 360px;
+    text-align: center;
+}
+
+.select-compare-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+
+.select-compare {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.best-selection,
+.your-favorite {
+    height: 148px;
+    width: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.best-selection h2,
+.your-favorite h2 {
+  margin-left: 10px;
+}
+
+
+.compare-image-container img {
+    height: 493px;
+    width: 456px;
+}
