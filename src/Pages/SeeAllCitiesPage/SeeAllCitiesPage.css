@@ -1,0 +1,22 @@
+.see-all-cities-page-container{
+    text-align: center;
+}
+
+.cities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.city-grid-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+    width: 302px;
+    border: solid;
+    border-color: #CED3D8;
+    border-width: 1px;
+    border-radius: 24px;
+    margin: 12px
+}

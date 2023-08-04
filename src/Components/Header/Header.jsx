@@ -7,11 +7,11 @@ function Header() {
     <div className='header-container'>
     <div className='icon-logo'>
         <MdOutlineHolidayVillage />
-        <button>UniLife</button>
+        <a href={'/'}>UniLife</a>
     </div>
     <div className='header-buttons'>
-        <button><MdOutlineFavoriteBorder/> Shortlist</button>
-        <button><MdMailOutline/> Contact Us</button>
+        <a><MdOutlineFavoriteBorder/> Shortlist</a>
+        <a><MdMailOutline/> Contact Us</a>
         
     </div>
 

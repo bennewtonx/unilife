@@ -1,5 +1,6 @@
 import './SeeAllCities.css';
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom'
 import axios from 'axios';
 import CityCard from '../CityCard/CityCard';
 
@@ -22,7 +23,9 @@ function SeeAllCities() {
       <div className='see-all-cities-grid'>
       <CityCard cities={cities} />
       </div>
+      <Link to='/seeallcities'>
       <button className='see-all-cities-button'>See all cities</button>
+      </Link>
     </div>
   );
 }

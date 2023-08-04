@@ -1,0 +1,29 @@
+.footer-container {
+    height: 97px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.left-side button{
+    background-color: transparent;
+    color: #FFFFFF;
+    border: none;
+    opacity: 60%;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    opacity: 60%;
+    
+    
+}
+
+.right-side p{
+margin: 0 30px
+}

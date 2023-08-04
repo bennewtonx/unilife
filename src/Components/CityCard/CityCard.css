@@ -20,6 +20,7 @@
 .city-card h2 {
     font-size: 40px;
     margin: 5vh 0 0 0;
+    font-weight: 600;
 }
 
 .city-card p {

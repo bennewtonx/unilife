@@ -4,14 +4,20 @@ import Header from './../../Components/Header/Header';
 import Banner from '../../Components/Banner/Banner';
 import SeeAllCities from '../../Components/SeeAllCities/SeeAllCities';
 import Compare from '../../Components/Compare/Compare';
+import Footer from '../../Components/Footer/Footer';
+import KeepInTouch from '../../Components/KeepInTouch/KeepInTouch';
+import BannerSearch from '../../Components/Banner/BannerSearch';
 
 function Homepage() {
   return (
     <div>
-        <Header />
+        <Header/>
         <Banner />
-        <SeeAllCities />
+        <BannerSearch />
+        <SeeAllCities/>
         <Compare />
+        <KeepInTouch />
+        <Footer />
         
 
     </div>

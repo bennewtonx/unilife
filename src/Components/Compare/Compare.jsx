@@ -1,12 +1,13 @@
 import './Compare.css'
 import React from 'react'
-import {MdTravelExplore, MdOutlineChecklistRtl, MdOutlineReceiptLong, MdHeight} from 'react-icons/md'
+import {MdTravelExplore, MdOutlineChecklistRtl, MdOutlineReceiptLong, MdOutlineRealEstateAgent} from 'react-icons/md'
+import {IoMdHeartEmpty} from 'react-icons/io'
 
 function Compare() {
   return (
     <div className='compare-container'>
     <div className='compare-student-homes'>
-        <h2>Compare all inclusive student homes.</h2>
+        <h1>Compare all inclusive student homes.</h1>
         <div className='compare-search'>
             <MdTravelExplore size={94} color={"#3A5295"}/>
             <h2>Search</h2>
@@ -29,16 +30,18 @@ function Compare() {
     <div className='select-compare-container'>
         <div className='select-compare'>
             <div className='best-selection'>
-                <div>
-                <MdOutlineReceiptLong size={64}/>
+                <div className='compare-icons'>
+                <MdOutlineRealEstateAgent size={64}/>
                 </div>
                 <h2>Best selection</h2>
                 <p>Best selection of student accomodations.
                     Never been easier to find a home that's right
-                    for you</p>
+                    for you.</p>
             </div>
             <div className='your-favorite'>
-            <MdOutlineReceiptLong size={64}/>
+            <div className='compare-icons'>
+            <IoMdHeartEmpty size={64}/>
+            </div>
                 <h2>Your favorite</h2>
                 <p>Shortlist your favorite properties and send
                     enquiries in one click.</p>
@@ -48,7 +51,7 @@ function Compare() {
             </div>
             </div>
         <div className='compare-image-container'>
-        <img src="src\assets\Images\London-Skylineshutterstock_1047408736.jpg"/>
+        <img src="src\assets\Images\Rectangle 6.png"/>
         </div>
 
     </div>

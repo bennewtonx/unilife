@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: aqua;
 }
 
 .compare-student-homes {
@@ -16,10 +15,19 @@
 
 }
 
-.compare-student-homes h2 {
+.compare-student-homes h1 {
     flex-basis: 100%;
     text-align: center;
     margin-top: 80px;
+    margin-bottom: -10px;
+    font-weight: 500;
+}
+
+.compare-student-homes h2 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 500;
 }
 
 .compare-search {
@@ -48,6 +56,20 @@
 
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.compare-icons {
+    padding-top: 30px;
+}
+
+.best-selection {
+    margin-top: 10px;
+}
+
+.your-favorite {
+    margin-top: 40px;
 }
 
 .best-selection,
@@ -57,15 +79,38 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-right: 100px;    
 }
 
 .best-selection h2,
 .your-favorite h2 {
   margin-left: 10px;
+  font-weight: 500;
+}
+
+.best-selection p,
+.your-favorite p {
+  margin-top: -20px;
+  line-height:30px;
+  margin-left: 75px;
+  font-weight: 500;
 }
 
 
-.compare-image-container img {
+.compare-image-container {
     height: 493px;
     width: 456px;
+    margin-left: 200px;
+}
+
+.compare-container button {
+    height: 48px;
+    width: 240px;
+    margin: 40px 0 0 70px;
+    background-color: #3A5295;
+    border-radius: 12px;
+    border: none;
+
+    font-size: 20px;
+    color: #FFFFFF;
 }
