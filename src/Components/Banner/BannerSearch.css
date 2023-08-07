@@ -2,7 +2,7 @@
     position: relative;
     height: 128px;
     width: 1112px;
-    margin: 0 10vh;
+    margin: 0 5vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -45,3 +45,24 @@
     border-color: #3A5295;
     border-radius: 12px;
 }
+
+@media (max-width: 1000px) {
+    .banner-search {
+      height: 96px;
+      width: 80%;
+      margin: 0 2vh;
+
+    }
+  
+    .banner-search input {
+        height: 5vh;
+        font-size: 3vh;
+        width: 70%;
+    }
+  
+    .banner-search button {
+        height: 5vh;
+        font-size: 2vh;
+        width: 20%;
+    }
+  }

@@ -114,3 +114,31 @@
     font-size: 20px;
     color: #FFFFFF;
 }
+
+
+@media (max-width: 1000px) {
+    .compare-student-homes {
+        height: 1036px;
+        width: 636px;
+    }
+
+    .best-selection,
+    .compare-icons, .your-favorite,
+    .compare-image-container {
+        display: none;
+    }
+
+    .search-and-compare button{
+        margin: 0 0 10vh 0;
+    }
+
+    .search-and-compare {
+        margin: -30% 0 10vh 0;
+    }
+
+
+
+}
+
+@media (max-width: 480px) {
+}

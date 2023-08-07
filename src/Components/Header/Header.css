@@ -11,6 +11,7 @@
   .icon-logo {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   
   .icon-logo svg {

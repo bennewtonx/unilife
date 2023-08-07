@@ -3,6 +3,7 @@ import './App.css'
 import Homepage from './Pages/Homepage/Homepage'
 import SeeAllCitiesPage from './Pages/SeeAllCitiesPage/SeeAllCitiesPage'
 import ScrollToTop from './Contexts/ScrollToTop'
+import CityDetailsPage from './Pages/CityDetailsPage/CityDetailsPage';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       
       <Route path='/' element={<Homepage/>}/>
       <Route path='/seeallcities' element={<SeeAllCitiesPage/>}/>
+      <Route path='/properties/city/:cityId' element={<CityDetailsPage/>}/>
       </Routes>
     </BrowserRouter>
   )

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Banner from '../../Components/Banner/Banner';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import KeepInTouch from '../../Components/KeepInTouch/KeepInTouch';
 import './SeeAllCitiesPage.css';
+import ParentComponent from '../../Components/Banner/Banner';
 
 function SeeAllCitiesPage() {
   const [seeAllCities, setSeeAllCities] = useState([]);
@@ -52,7 +52,7 @@ function SeeAllCitiesPage() {
   return (
     <div className='see-all-cities-page-container'>
       <Header />
-      <Banner />
+      <ParentComponent />
       <h1>Search by city</h1>
       <div className='cities-grid'>
         {seeAllCities.map((city, index) => (
