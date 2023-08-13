@@ -6,6 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 120px;
 }
 
 .city-grid-card {
@@ -16,7 +17,18 @@
     width: 302px;
     border: solid;
     border-color: #CED3D8;
+    transition: background-color 0.3s;
     border-width: 1px;
     border-radius: 24px;
     margin: 12px
+}
+
+.city-grid-card:hover {
+    background-color: #3A5295;
+    color: #FFFFFF;
+}
+
+.see-all-cities-header{
+    margin-top: -20px;
+    margin-bottom: 40px;
 }

@@ -12,8 +12,8 @@ function Homepage() {
   return (
     <div>
         <Header/>
-        <Banner />
-        <BannerSearch />
+        <Banner page='home'/>
+        <BannerSearch/>
         <SeeAllCities/>
         <Compare />
         <KeepInTouch />

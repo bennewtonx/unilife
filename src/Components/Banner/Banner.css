@@ -4,8 +4,7 @@
 
 .banner-text {
     height: 480px;
-    background-color: aqua;
-    background-image: url(C:\Users\benla\Documents\GitHub\unilife\src\assets\Images\London-Skylineshutterstock_1047408736.jpg);
+    background-image: url(C:\Users\benla\Documents\GitHub\unilife\src\assets\Images\cover-img.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -15,13 +14,13 @@
     text-align: center;
     align-items: center;
   }
-  
+
   .banner-text h1 {
     margin: 0;
     color: #FFFFFF;
     font-size: 8vh;
     font-weight: 500;
-    padding: 0 65vh;
+    padding: 0 55vh;
     
 
   }
@@ -30,6 +29,8 @@
     margin-top: 2vh;
     color: #FFFFFF;
     font-size: 4vh;
+    padding: 0 40vh;
+    line-height:36px;
 
   }
 

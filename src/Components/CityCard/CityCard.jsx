@@ -24,7 +24,7 @@ function CityCard({cities}) {
             <div className='city-card-container'>
       {cities.map((city) => (
         <div className='city-card' style={{backgroundImage: `url(${city.image_url})`}} key={city.id}>
-          <Link to={`/properties/city/${city._id}`}><h2 onClick={() => handleCityClick(city._id)
+          <Link to={`/properties/city/${city._id}`} style={{ textDecoration: 'none', color: 'white' }} ><h2 onClick={() => handleCityClick(city._id)
           }>{city.name}</h2></Link>
           <p>{city.property_count} propeties</p>
         </div>

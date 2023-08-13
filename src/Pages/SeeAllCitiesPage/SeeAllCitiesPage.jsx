@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import KeepInTouch from '../../Components/KeepInTouch/KeepInTouch';
 import './SeeAllCitiesPage.css';
-import ParentComponent from '../../Components/Banner/Banner';
+import Banner from '../../Components/Banner/Banner';
 
-function SeeAllCitiesPage() {
+function SeeAllCitiesPage(handleCityClick) {
   const [seeAllCities, setSeeAllCities] = useState([]);
   const [mounted, setMounted] = useState(true); // Flag to track component mount status
 
@@ -52,12 +53,15 @@ function SeeAllCitiesPage() {
   return (
     <div className='see-all-cities-page-container'>
       <Header />
-      <ParentComponent />
-      <h1>Search by city</h1>
+      <Banner page='seeallcities' />
+      <h1 className='see-all-cities-header'>Search by city</h1>
       <div className='cities-grid'>
         {seeAllCities.map((city, index) => (
           <div className='city-grid-card' key={index}>
-            <h3>{city.name}</h3>
+                      <Link to={`/properties/city/${city._id}`} 
+                      style={{ textDecoration: 'none', color: 'black',
+                      fontSize: '22px'}} ><h2 onClick={() => handleCityClick(city._id)
+          } style={{ fontWeight: '600' }}>{city.name}</h2></Link>
           </div>
         ))}
       </div>

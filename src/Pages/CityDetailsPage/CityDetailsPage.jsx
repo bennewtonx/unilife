@@ -2,6 +2,9 @@ import './CityDetailsPage.css'
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
+import Banner from '../../Components/Banner/Banner'
+import BannerSearch from '../../Components/Banner/BannerSearch'
+import Header from '../../Components/Header/Header'
 
 function CityDetailsPage({clickedCityName}) {
 
@@ -26,7 +29,10 @@ function CityDetailsPage({clickedCityName}) {
 
   return (
     <div className='city-details-page-container'>
-      CityDetailsPagej
+      <Header />
+      <Banner page='properties/city/'/>
+      <BannerSearch/>
+      <h1>{specificCity.total} homes in {specificCity.city_name}</h1>
       </div>
   )
 }
