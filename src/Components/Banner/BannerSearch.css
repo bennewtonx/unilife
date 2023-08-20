@@ -46,6 +46,25 @@
     border-radius: 12px;
 }
 
+.banner-city {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    width: 1279px;
+    padding: 0 20px;
+}
+
+.banner-city input {
+    height: 48px;
+    width: 282px;
+}
+
+.banner-city h3 {
+    text-align: start;
+    margin: 0 0 10px 0;
+}
+
+
 @media (max-width: 1000px) {
     .banner-search {
       height: 96px;

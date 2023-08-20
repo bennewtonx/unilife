@@ -13,7 +13,7 @@ function Homepage() {
     <div>
         <Header/>
         <Banner page='home'/>
-        <BannerSearch/>
+        <BannerSearch page='home'/>
         <SeeAllCities/>
         <Compare />
         <KeepInTouch />

@@ -5,12 +5,18 @@ import axios from 'axios'
 import Banner from '../../Components/Banner/Banner'
 import BannerSearch from '../../Components/Banner/BannerSearch'
 import Header from '../../Components/Header/Header'
+import PropertyCard from '../../Components/PropertyCard/PropertyCard'
+import KeepInTouch from '../../Components/KeepInTouch/KeepInTouch'
+import Footer from '../../Components/Footer/Footer'
+
 
 function CityDetailsPage({clickedCityName}) {
 
   const {cityId} = useParams()
 
   const [specificCity, setSpecficCity] = useState ([])
+  const [studentLife, setStudentLife] = useState('');
+
 
   useEffect(
     ()=>{
@@ -23,7 +29,15 @@ function CityDetailsPage({clickedCityName}) {
         //have Data, need to store in state to display
 
         .catch((err => console.log(err)))
+
+        axios.get(`${import.meta.env.VITE_APP_BASE_URL}cities/${cityId}`)
+        .then(res => {
+          console.log('checking', res.data.data[0]);
+          setStudentLife(res.data.data[0]);
+        })
+        .catch((err) => console.log(err));
     }, [] //runs once when page loads
+    
     
 )
 
@@ -31,8 +45,26 @@ function CityDetailsPage({clickedCityName}) {
     <div className='city-details-page-container'>
       <Header />
       <Banner page='properties/city/'/>
-      <BannerSearch/>
-      <h1>{specificCity.total} homes in {specificCity.city_name}</h1>
+      <BannerSearch page = 'properties/city/'/>
+      <h1 style={{marginLeft: '80px', marginBottom: '-10px'}}>{specificCity.total} homes in {specificCity.city_name}</h1>
+      <div className='property-container'>
+        <PropertyCard specificCity={specificCity} />
+      </div>
+
+      <div className='student-in-city-container'>
+        <div className='student-in-city'>
+        <div className='student-in-city-text'>
+        <h2>Being a student in {specificCity.city_name}</h2>
+        <p>{studentLife.student_life}</p>
+        <p>{studentLife.universities}</p>
+        </div>
+        <div className='student-in-city-image'>
+          <img src={studentLife.image_url}/>
+        </div>
+        </div>
+      </div>
+      <KeepInTouch/>
+      <Footer/>
       </div>
   )
 }

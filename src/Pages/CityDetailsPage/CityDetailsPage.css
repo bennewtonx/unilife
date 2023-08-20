@@ -1,0 +1,32 @@
+.student-in-city-container {
+    display: flex;
+    justify-content: center;
+}
+
+.student-in-city {
+    height: 520px;
+    width: 1280px;
+    margin: 120px 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(246, 250, 253, 1);
+}
+
+.student-in-city-text {
+    height: 360px;
+    width: 520px;
+}
+
+.student-in-city-text p{
+    font-size: 20px;
+    line-height: 32px;
+}
+
+
+
+.student-in-city-image img{
+    height: 400px;
+    width: 560px;
+    border-radius: 24px;
+}
