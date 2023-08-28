@@ -1,15 +1,20 @@
 import './HomeDetailsPage.css'
 import React from 'react'
+import {MdOutlineBed, MdOutlineBathtub,MdLocationOn, MdHomeFilled, MdCheck} from 'react-icons/Md'
+import {IoMdHeartEmpty} from 'react-icons/io'
+
 import { useEffect, useState } from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import Header from './../../Components/Header/Header';
 import KeepInTouch from './../../Components/KeepInTouch/KeepInTouch';
 import Footer from './../../Components/Footer/Footer';
 import axios from 'axios'
 
-function HomeDetailsPage({clickedProperty}) {
+function HomeDetailsPage({clickedCityName}) {
 
+  const { cityId } = useParams();
   const [property, setProperty] = useState([])
+  const [specificCity, setSpecificCity] = useState([]);
   const {propertyId} = useParams()
 
 
@@ -30,7 +35,7 @@ function HomeDetailsPage({clickedProperty}) {
   {property && property.images && (
         <div className='property-details'key={property._id}>
           <div className='property-images-container'>
-          <button>Back to search</button>
+          <Link to={`properties/city/${specificCity.cityId}`}><button>&lt;&nbsp;Back to search</button></Link>
             <div className='property-main-image'>
               <img src={property.images[0]} alt='Main Property' />
             </div>
@@ -43,45 +48,53 @@ function HomeDetailsPage({clickedProperty}) {
           <div className='property-info-container'>
           <div className='property-info'>
             <div className='property-address'>
-            <h2>{property.address.street}, {property.address.city}, {property.address.postcode}
-            <hr/></h2>
+            <p>{property.address.street}, {property.address.city}, {property.address.postcode}
+            <hr/></p>
             </div>
             <div className='property-price'>
   <div className='info-block bedrooms'>
     <p>Bedrooms</p>
-    <h2>{property.bedroom_count}</h2>
+    <h3 style={{fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px'}}><MdOutlineBed/>{property.bedroom_count}</h3>
   </div>
   <div className='info-block bathrooms'>
     <p>Bathrooms</p>
-    <h2>{property.bathroom_count}</h2>
+    <h3 style={{fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px'}}><MdOutlineBathtub/>{property.bathroom_count}</h3>
   </div>
   <div className='info-block property-type'>
     <p>Property Type</p>
-    <h2>{property.property_type}</h2>
+    <h3 style={{fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px'}}>{property.property_type}</h3>
   </div>
   <div className='info-block rent'>
     <p>Rent (pppw)</p>
-    <h2>£{property.rent / property.bedroom_count / 4}</h2>
+    <h3 style={{fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px'}}>£{property.rent / property.bedroom_count / 4}</h3>
   </div>
   <div className='info-block furnishing-type'>
     <p>Furnished Type</p>
-    <h2>{property.furnished}</h2>
+    <h3 style={{fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px'}}>{property.furnished}</h3>
   </div>
   <div className='info-block available-from'>
     <p>Available From</p>
-    <h2>{property.availability}</h2>
+    <h3 style={{fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px'}}>{property.availability}</h3>
   </div>
 </div>
 
           </div>
           <div className='property-buttons'>
-          <button className='property-shortlist'>Shortlist</button>
+          <button className='property-shortlist'><IoMdHeartEmpty/>Shortlist</button>
           <button className='property-book'>Book Viewing</button>
           </div>
           </div>
+          <div className='home-description-bedrooms-container'>
           <div className='description'>
             <h1>Description</h1>
             <p>{property.property_description}</p>
+              <div className='key-features-container'>
+    <h1>Key Features</h1>
+  {property.key_features.map((feature, index) => (
+    <p key={index}><MdCheck/>{feature}</p>
+  ))}
+
+  </div>
           </div>
           <div className='bedroom-prices-container'>
             <h1>Bedroom Prices</h1>
@@ -93,15 +106,9 @@ function HomeDetailsPage({clickedProperty}) {
     </div>
   ))}
 </div>
+</div>
 
             </div>
-  <div className='key-features-container'>
-    <h1>Key Features</h1>
-  {property.key_features.map((feature, index) => (
-    <h2 key={index}>{feature}</h2>
-  ))}
-
-  </div>
   <div className='blank-div'></div>
         </div>
       )}

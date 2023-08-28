@@ -22,7 +22,7 @@ function PropertyCard({specificCity}) {
           <div key={property._id} className='property-card'>
             <img src={property.images[0]}/>
             <div className='rent-shower'>
-              <div className='rent'>
+              <div className='property-rent'>
                 <h3>£{property.rent/4}</h3>
                 <p>pppw including bills</p>
               </div>

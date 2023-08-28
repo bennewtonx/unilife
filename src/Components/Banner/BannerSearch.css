@@ -2,13 +2,12 @@
     position: relative;
     height: 128px;
     width: 1112px;
-    margin: 0 5vh;
+    margin: 0 auto; /* Center horizontally */
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #FFFFFF;
     top: -19vh;
-    left: 8%;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -69,7 +68,7 @@
     .banner-search {
       height: 96px;
       width: 80%;
-      margin: 0 2vh;
+    margin: 0 auto; /* Center horizontally */
 
     }
   

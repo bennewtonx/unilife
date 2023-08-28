@@ -36,3 +36,32 @@
     font-size: 2vh;
     color: #FFFFFF;
   }
+
+  .modal-container {
+    display: flex;
+    flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-between;
+  }
+
+  .contact-us-modal-title-container{
+    width: 936px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .contact-us-modal-input{
+    height: 104px;
+    width: 400px;
+    margin-bottom: 24px;
+    padding: 0 20px
+  }
+
+  .contact-us-modal-input input{
+    height: 56px;
+    width: 400px;
+    border-radius: 12px;
+    border-color: rgba(206, 211, 216, 1);
+    border-width: 0.5px;
+    }

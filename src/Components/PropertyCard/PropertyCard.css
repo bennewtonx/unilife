@@ -29,18 +29,18 @@
     margin-top: -4px;
 }
 
-.rent {
+.property-rent {
     padding-left: 20px;
     line-height: 0.5;
 }
 
-.rent h3{
+.property-rent h3{
     font-size: 24px;
     padding-top: 10px;
     margin-bottom: 0px;
 }
 
-.rent p{
+.property-rent p{
     font-size: 12px;
 }
 
@@ -82,10 +82,4 @@
     border-color: rgba(206, 211, 216, 1);
     border-width: 1px;
     padding: 13px 0 11px 0;
-}
-
-button {
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
 }
