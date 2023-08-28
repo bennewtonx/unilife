@@ -1,11 +1,154 @@
-.property-main-image img{
+  .property-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+
+  }
+  
+  .property-info {
+    height: 484px;
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: solid;
+    border-radius: 24px;
+    border-color: rgba(206, 211, 216, 1);
+    margin-bottom: 24px;
+    margin-top: 20px;
+
+    
+  }
+  
+  .property-address {
+    margin: 40px 0 60px 0;
+  }
+  
+  .property-address h2 {
+    /* Add any desired styling for the address */
+  }
+  
+  .property-price {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Add spacing between info blocks */
+    padding: 20px;
+  }
+  
+  /* Adjust width and margins as needed */
+  .property-info .info-block {
+    width: 150px;
+    text-align: center;
+  }
+  
+  .property-images-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; /* Adjust as needed */
+  }
+
+  
+  .property-main-image img {
     height: 400px;
     width: 620px;
     border-radius: 24px;
-}
-
-.property-side-images img{
+    margin-bottom: 20px;
+  }
+  
+  .property-side-images img {
     height: 140px;
     width: 196px;
     border-radius: 24px;
+    margin-bottom: 10px;
+    margin: 0 8px;
+  }
+  
+  .property-buttons{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+.property-shortlist{
+    height: 48px;
+    width: 298px;
+    border: solid;
+    border-radius: 12px;
+    border-color: rgba(206, 211, 216, 1);
+  }
+
+  .property-book{
+    height: 48px;
+    width: 298px;
+    border: solid;
+    border-radius: 12px;
+    background-color: rgba(58, 82, 149, 1);
+    border-color: rgba(58, 82, 149, 1);
 }
+
+.description{
+    height: 296px;
+    width: 520px;
+    line-height: 32px;
+    margin-top: 80px;
+    margin-right: 140px;
+}
+
+.bedroom-prices-container {
+    height: auto;
+    width: 620px;
+    margin-top: 80px;
+    text-align: left;
+  }
+  
+  .bedroom-prices {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bedroom-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    padding: 24px 24px; /* Add padding for better spacing */
+  
+    /* Add top border and border-radius for the first bedroom */
+    &:first-child {
+      border: 1px solid #ccc;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+    }
+  
+    /* Add bottom border and border-radius for the last bedroom */
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
+  
+    /* Add border between bedrooms */
+    + .bedroom-price {
+      border: 1px solid #ccc;
+    }
+  }
+  
+  .bedroom-price p {
+    margin: 0; /* Remove default margin to avoid extra spacing */
+  }
+  
+  .key-features-container {
+    height: 395px;
+    width: 500px;
+    margin-top: 74px; /* Adjust the top margin as needed */
+
+  }
+
+  .blank-div{
+    width: 620px;
+  }
+  
