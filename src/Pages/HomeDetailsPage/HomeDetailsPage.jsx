@@ -2,20 +2,39 @@ import './HomeDetailsPage.css'
 import React from 'react'
 import {MdOutlineBed, MdOutlineBathtub,MdLocationOn, MdHomeFilled, MdCheck} from 'react-icons/Md'
 import {IoMdHeartEmpty} from 'react-icons/io'
-
+import Modal from 'react-modal';
 import { useEffect, useState } from 'react'
 import {useParams, Link} from 'react-router-dom'
 import Header from './../../Components/Header/Header';
 import KeepInTouch from './../../Components/KeepInTouch/KeepInTouch';
 import Footer from './../../Components/Footer/Footer';
+
 import axios from 'axios'
 
 function HomeDetailsPage({clickedCityName}) {
 
+  const [isOpen, setIsOpen] = useState(false);
   const { cityId } = useParams();
   const [property, setProperty] = useState([])
   const [specificCity, setSpecificCity] = useState([]);
   const {propertyId} = useParams()
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: '20%',
+      bottom: '1%',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      height: '634px',
+      width: '936px',
+      borderRadius: '24px'
+    },
+    overlay: {
+      backgroundColor: 'rgba(1, 0, 0, 0.5)',
+    },
+  };
 
 
   useEffect(
@@ -35,7 +54,7 @@ function HomeDetailsPage({clickedCityName}) {
   {property && property.images && (
         <div className='property-details'key={property._id}>
           <div className='property-images-container'>
-          <Link to={`properties/city/${specificCity.cityId}`}><button>&lt;&nbsp;Back to search</button></Link>
+          <Link to={`properties/city/${specificCity.cityId}`} style={{ display: 'block', textAlign: 'left' }}><button>&lt;&nbsp;Back to search</button></Link>
             <div className='property-main-image'>
               <img src={property.images[0]} alt='Main Property' />
             </div>
@@ -81,7 +100,49 @@ function HomeDetailsPage({clickedCityName}) {
           </div>
           <div className='property-buttons'>
           <button className='property-shortlist'><IoMdHeartEmpty/>Shortlist</button>
-          <button className='property-book'>Book Viewing</button>
+          <button className='property-book' onClick={() => setIsOpen(true)}>Book Viewing</button>
+          <Modal
+        isOpen={isOpen}
+        onRequestClose={() => setIsOpen(false)}
+        style={customStyles}
+        contentLabel="Contact Us Modal"
+      >
+        <div className='booking-modal-container'>
+        <div className='booking-modal-title-container'>
+          <div className='booking-modal-title'>
+          <h2 style={{fontWeight: '500', fontSize: '36px'}}>Book a Viewing</h2>
+          <p style={{width: '485px', lineHeight: '32px'}}>{property.address.street}, {property.address.city}, {property.address.postcode}</p>
+          </div>
+          <div>
+          </div>
+          </div>
+          <div className='booking-modal-input-left'>
+          <div className='booking-modal-input'>
+            <h2 style={{fontWeight: '500'}}>Name</h2>
+            <input type='text' placeholder='Enter your name'/>
+          </div>
+          <div className='booking-modal-input'>
+          <h2 style={{fontWeight: '500'}}>Email</h2>
+            <input type='text' placeholder='Enter your email address'/>
+          </div>
+          <div className='booking-modal-input'>
+          <h2 style={{fontWeight: '500'}}>Phone Number</h2>
+            <input type='text' placeholder='Enter your phone number'/>
+          </div>
+          </div>
+          <div className='booking-modal-input-right'>
+          <div className='booking-modal-input'
+          style={{height: '232px'}}>
+          <h2 style={{fontWeight: '500'}}>Message</h2>
+            <input type='text' placeholder='Enter your message'
+            style={{height: '184px'}}/>
+          </div>
+          <button className='modal-close-btn' onClick={() => setIsOpen(false)}
+          style={{height: '56px', width: '400px', backgroundColor: 'rgba(58, 82, 149, 1)',
+          borderRadius: '12px', color: '#FFFFFF', fontSize: '20px', border: 'none', margin: '50px 20px'}}>Submit</button>
+          </div>
+          </div>
+      </Modal>
           </div>
           </div>
           <div className='home-description-bedrooms-container'>

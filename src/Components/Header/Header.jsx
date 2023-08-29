@@ -42,7 +42,7 @@ function Header() {
         style={customStyles}
         contentLabel="Contact Us Modal"
       >
-        <div className='modal-container'>
+        <div className='contact-us-modal-container'>
         <div className='contact-us-modal-title-container'>
           <div className='contact-us-modal-title'>
           <h2 style={{fontWeight: '500', fontSize: '36px'}}>Contact Us</h2>
