@@ -1,6 +1,6 @@
 import './HomeDetailsPage.css'
 import React from 'react'
-import {MdOutlineBed, MdOutlineBathtub,MdLocationOn, MdHomeFilled, MdCheck} from 'react-icons/Md'
+import {MdOutlineBed, MdOutlineBathtub, MdCheck} from 'react-icons/Md'
 import {IoMdHeartEmpty} from 'react-icons/io'
 import Modal from 'react-modal';
 import { useEffect, useState } from 'react'
