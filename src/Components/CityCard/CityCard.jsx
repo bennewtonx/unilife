@@ -1,7 +1,6 @@
 import './CityCard.css'
 import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
-import SeeAllCitiesPage from '../../Pages/SeeAllCitiesPage/SeeAllCitiesPage';
+import {Link} from 'react-router-dom';
 
 function CityCard({cities}) {
 

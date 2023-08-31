@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import {MdOutlineBed, MdOutlineBathtub,MdLocationOn, MdHomeFilled} from 'react-icons/md'
 import './PropertyCard.css'
 

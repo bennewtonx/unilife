@@ -4,7 +4,7 @@ import { MdOutlineBed, MdOutlineBathtub, MdCheck } from 'react-icons/md';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import Modal from 'react-modal';
 import { useEffect, useState } from 'react'
-import {useParams, Link} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom';
 import Header from './../../Components/Header/Header';
 import KeepInTouch from './../../Components/KeepInTouch/KeepInTouch';
 import Footer from './../../Components/Footer/Footer';

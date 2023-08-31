@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import KeepInTouch from '../../Components/KeepInTouch/KeepInTouch';
