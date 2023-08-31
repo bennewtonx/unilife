@@ -1,7 +1,7 @@
 import './HomeDetailsPage.css'
 import React from 'react'
-import {MdOutlineBed, MdOutlineBathtub, MdCheck} from 'react-icons/Md'
-import {IoMdHeartEmpty} from 'react-icons/io'
+import { MdOutlineBed, MdOutlineBathtub, MdCheck } from 'react-icons/md';
+import { IoMdHeartEmpty } from 'react-icons/io';
 import Modal from 'react-modal';
 import { useEffect, useState } from 'react'
 import {useParams, Link} from 'react-router-dom'
