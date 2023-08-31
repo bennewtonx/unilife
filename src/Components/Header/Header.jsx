@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MdOutlineHolidayVillage, MdOutlineFavoriteBorder, MdMailOutline, MdPostAdd } from 'react-icons/Md';
+import { MdOutlineHolidayVillage, MdOutlineFavoriteBorder, MdMailOutline, MdPostAdd } from 'react-icons/md';
 import Modal from 'react-modal';
 import './Header.css'; // Import your CSS file
 

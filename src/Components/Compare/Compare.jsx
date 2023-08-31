@@ -1,6 +1,6 @@
 import './Compare.css'
 import React from 'react'
-import {MdTravelExplore, MdOutlineChecklistRtl, MdOutlineReceiptLong, MdOutlineRealEstateAgent} from 'react-icons/Md'
+import {MdTravelExplore, MdOutlineChecklistRtl, MdOutlineReceiptLong, MdOutlineRealEstateAgent} from 'react-icons/md'
 import {IoMdHeartEmpty} from 'react-icons/io'
 
 function Compare() {
