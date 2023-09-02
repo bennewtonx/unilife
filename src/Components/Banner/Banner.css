@@ -4,7 +4,7 @@
 
 .banner-text {
     height: 480px;
-    background-image: url(src\assets\Images\cover-img.png);
+    background-image: url(src/assets/Images/cover-img.png);
     background-repeat: no-repeat;
     background-size: cover;
 

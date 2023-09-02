@@ -51,7 +51,7 @@ function Compare() {
             </div>
             </div>
         <div className='compare-image-container'>
-        <img src="src\assets\Images\Rectangle 6.png"/>
+        <img src="src/assets/Images/Rectangle 6.png"/>
         </div>
 
     </div>
