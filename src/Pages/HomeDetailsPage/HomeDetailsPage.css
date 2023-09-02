@@ -296,4 +296,8 @@ h1, h2 {
     width: 100%;
     background-color: blue;
   }
+
+  hr {
+    width: 350px;
+  }
 }
