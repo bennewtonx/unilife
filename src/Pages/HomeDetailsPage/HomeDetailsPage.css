@@ -9,6 +9,10 @@ h1, h2 {
   margin-top: 60px;
 }
 
+.property-images-container a{
+  
+}
+
 .property-info {
   height: 484px;
   width: 620px;
@@ -283,7 +287,7 @@ h1, h2 {
 
   .property-info{
     height: auto;
-    padding-bottom: 20px;
+    padding: 0 10px 20px 10px;
     width: 100%;
   }
 

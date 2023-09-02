@@ -84,7 +84,7 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     .banner-search {
         display: flex;
         flex-direction: column;
