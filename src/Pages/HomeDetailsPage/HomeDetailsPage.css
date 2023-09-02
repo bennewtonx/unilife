@@ -291,4 +291,9 @@ h1, h2 {
   .key-features-container {
     margin-top: 40px;
   }
+
+  .home-description-bedrooms-container {
+    width: 100%;
+    background-color: blue;
+  }
 }
