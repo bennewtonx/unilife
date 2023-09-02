@@ -93,14 +93,8 @@
     display: block;
   }
 
-  .header-buttons{
-  }
   .header-buttons a{
     margin: 0 10px;
-  }
-
-  .mobile-menu-icon {
-    margin: 0 0 0 -100px;
   }
 
   /* Hide elements on larger screens */

@@ -7,7 +7,7 @@ Modal.setAppElement(document.getElementById('root'));
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(true);
 
   const customStyles = {
     content: {
@@ -40,9 +40,10 @@ function Header() {
       </div>
 
             {/* Show the hamburger menu on mobile screens */}
-            <div className={`mobile-menu-icon ${showMobileMenu ? 'open' : ''}`} onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            <div className={`mobile-menu-icon ${showMobileMenu ? 'true' : ''}`} onClick={() => setShowMobileMenu(!showMobileMenu)}>
         <MdMenu />
       </div>
+      
 
       <Modal
         isOpen={isOpen}
