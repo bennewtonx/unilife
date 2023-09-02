@@ -235,7 +235,6 @@ h1, h2 {
 
   .property-details {
     width: 100%;
-    background-color: green;
   }
 
 
@@ -278,26 +277,46 @@ h1, h2 {
   }
 
   .property-info .info-block {
-    background-color: aqua;
-    width: 90px;
+    width: 110px;
+    margin: 0 10px
   }
 
   .property-info{
+    height: auto;
+    padding-bottom: 20px;
     width: 100%;
   }
 
+  .property-info h3 {
+    font-size: 20px;
+  }
+
   .description,
-  .bedroom-prices-container,
   .key-features-container {
+    height: auto;
+    width: 80%;
     margin-top: 40px;
+  }
+
+  .bedroom-prices-container {
+    width: 80%;
+    margin-bottom: 80px;
   }
 
   .home-description-bedrooms-container {
     width: 100%;
-    background-color: blue;
   }
 
   hr {
     width: 350px;
+  }
+
+  .property-buttons {
+    flex-direction: column;
+    width: 150%;
+  }
+
+  .property-shortlist {
+    margin-bottom: 10px;
   }
 }

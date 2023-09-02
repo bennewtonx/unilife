@@ -69,27 +69,27 @@ function HomeDetailsPage({ clickedCityName }) {
               <div className='property-price'>
                 <div className='info-block bedrooms'>
                   <p>Bedrooms</p>
-                  <h3 style={{ fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}><MdOutlineBed />{property.bedroom_count}</h3>
+                  <h3 style={{color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}><MdOutlineBed />{property.bedroom_count}</h3>
                 </div>
                 <div className='info-block bathrooms'>
                   <p>Bathrooms</p>
-                  <h3 style={{ fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}><MdOutlineBathtub />{property.bathroom_count}</h3>
+                  <h3 style={{color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}><MdOutlineBathtub />{property.bathroom_count}</h3>
                 </div>
                 <div className='info-block property-type'>
                   <p>Property Type</p>
-                  <h3 style={{ fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}>{property.property_type}</h3>
+                  <h3 style={{color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}>{property.property_type}</h3>
                 </div>
                 <div className='info-block rent'>
                   <p>Rent (pppw)</p>
-                  <h3 style={{ fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}>£{property.rent / property.bedroom_count / 4}</h3>
+                  <h3 style={{color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}>£{property.rent / property.bedroom_count / 4}</h3>
                 </div>
                 <div className='info-block furnishing-type'>
                   <p>Furnished Type</p>
-                  <h3 style={{ fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}>{property.furnished}</h3>
+                  <h3 style={{color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}>{property.furnished}</h3>
                 </div>
                 <div className='info-block available-from'>
                   <p>Available From</p>
-                  <h3 style={{ fontSize: '24px', color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}>{property.availability}</h3>
+                  <h3 style={{color: 'rgba(58, 82, 149, 1)', paddingBottom: '20px' }}>{property.availability}</h3>
                 </div>
               </div>
               <div className='property-buttons'>
