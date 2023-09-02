@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-router-dom', 'react-icons']
-    }
-  }
-})
+      external: ['react', 'react-dom', 'other-dependency'],
+    },
+  },
+});
