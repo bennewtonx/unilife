@@ -21,7 +21,6 @@
     font-size: 8vh;
     font-weight: 500;
     padding: 0 55vh;
-    
 
   }
   
@@ -36,24 +35,37 @@
 
 
   @media (max-width: 1000px) {
-    .banner-container h1 {
-      font-size: 5vh;
-      padding: 0 10vh;
+    .banner-text h1 {
+      font-size: 32px;
+      padding: 0 32px;
     }
   
-    .banner-container p {
+    .banner-text p {
       font-size: 3vh;
       padding: 0 10vh;
     }
   }
   
   @media (max-width: 480px) {
-    .banner-container h1 {
-      font-size: 4vh;
-      padding: 0 20vh;
+
+    .banner-container {
+      height: 300px;
+  }
+
+    .banner-text{
+      height: 300px;
+      justify-content: start;
+      padding-top: 32px;
+
+    }
+
+    .banner-text h1 {
+      font-size: 40px;
+      padding: 0 40px;
     }
   
-    .banner-container p {
-      font-size: 1vh;
+    .banner-text p {
+      font-size: 20px;
+      padding: 0;
     }
   }

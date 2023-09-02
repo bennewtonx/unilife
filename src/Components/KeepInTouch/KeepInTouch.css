@@ -123,6 +123,7 @@
       width: 100%; /* Expand width to fit the screen */
       text-align: center; /* Center-align content */
       margin-top: 20px; /* Add some spacing from the top */
+      margin-bottom: 40px;
     }
 
     .keep-in-touch h1{
@@ -130,6 +131,7 @@
       }
 
       .keep-in-touch p{
+        font-size: 20px;
         text-align: center; /* Center-align content */
       }
   
@@ -142,9 +144,14 @@
       text-align: center; /* Center-align content */
       margin-top: 20px; /* Add some spacing from the top */
     }
-  
-    .lets-socialize .social-icon {
-      margin-bottom: 20px; /* Add more spacing between social icons */
+    .lets-socialize p{
+        font-size: 20px;
+        text-align: center; /* Center-align content */
+      }
+
+    .social-icon {
+        height: 32px;
+        margin: 0;
     }
   }
   

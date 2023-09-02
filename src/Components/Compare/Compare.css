@@ -141,4 +141,7 @@
 }
 
 @media (max-width: 480px) {
+    .search-and-compare {
+        margin-bottom: 0;
+    }
 }

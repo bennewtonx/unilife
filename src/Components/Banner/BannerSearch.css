@@ -68,8 +68,7 @@
     .banner-search {
       height: 96px;
       width: 80%;
-    margin: 0 auto; /* Center horizontally */
-
+        margin: 0 auto; /* Center horizontally */
     }
   
     .banner-search input {
@@ -83,4 +82,48 @@
         font-size: 2vh;
         width: 20%;
     }
+  }
+
+  @media (max-width: 480px) {
+    .banner-search {
+        display: flex;
+        flex-direction: column;
+        height: 105px;
+        width: 80%;
+        margin: 0 auto;
+        top: -20px;
+      }
+      .banner-search input {
+        height: 38px;
+        width: 238px;
+        font-size: 3vh;
+        width: 70%;
+        margin-top: 11px;
+    }
+    .banner-search button {
+        height: 38px;
+        width: 145px;
+        font-size: 2vh;
+        margin: 10px 0 10px 0;
+    }
+
+    .banner-city {
+        height: 282px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        text-align: center;
+        padding: 20px 25px;
+}
+
+.banner-city input {
+    height: 48px;
+    width: 336px;
+}
+
+.banner-city h3 {
+    text-align: start;
+    margin: 0 0 10px 0;
+    display: none;
+}
   }

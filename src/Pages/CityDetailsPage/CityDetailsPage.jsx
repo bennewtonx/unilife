@@ -34,7 +34,9 @@ function CityDetailsPage({ clickedCityName }) {
       <Header />
       <Banner page='properties/city/' />
       <BannerSearch page='properties/city/'/>
+      <div className='number-of-homes'>
       <h1 style={{ marginLeft: '80px', marginBottom: '-10px' }}>{specificCity.total} homes in {specificCity.city_name}</h1>
+      </div>
       <div className='property-container'>
         <PropertyCard specificCity={specificCity} />
       </div>

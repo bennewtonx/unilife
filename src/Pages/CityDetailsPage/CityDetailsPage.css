@@ -61,6 +61,8 @@
   
   /* Media query for mobile devices */
   @media screen and (max-width: 480px) {
+    .number-of-homes {}
+
     .student-in-city {
       width: 90%; /* Adjust width for mobile devices */
       margin: 40px auto; /* Center-align the section */

@@ -48,12 +48,12 @@
   }
   
   @media (max-width: 480px) {
-    .city-card h1 {
-      font-size: 4vh;
-      padding: 0 20vh;
+    .city-card h2 {
+      font-size: 40px;
     }
-  
-    .banner-container p {
-      font-size: 1vh;
+
+    .city-card p {
+      font-size: 20px;
     }
+
   }
