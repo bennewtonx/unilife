@@ -231,7 +231,7 @@ h1, h2 {
 }
 
 /* Media queries for mobile screens */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 
   .property-details {
     width: 100%;
