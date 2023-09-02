@@ -2,6 +2,8 @@ import './Compare.css'
 import React from 'react'
 import {MdTravelExplore, MdOutlineChecklistRtl, MdOutlineReceiptLong, MdOutlineRealEstateAgent} from 'react-icons/md'
 import {IoMdHeartEmpty} from 'react-icons/io'
+import MyImage from '../../../src/assets/Images/Rectangle 6.png'; // Import the image
+
 
 function Compare() {
   return (
@@ -51,7 +53,7 @@ function Compare() {
             </div>
             </div>
         <div className='compare-image-container'>
-        <img src="../../../src/assets/Images/Rectangle 6.png"/>
+        <img src={MyImage} alt="My Image"/>
         </div>
 
     </div>
