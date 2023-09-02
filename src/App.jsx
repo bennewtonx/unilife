@@ -11,7 +11,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <ScrollToTop>
+    <ScrollToTop/>
     <Routes>
       
       <Route path='/' element={<Homepage/>}/>
@@ -19,7 +19,6 @@ function App() {
       <Route path='/properties/city/:cityId' element={<CityDetailsPage/>}/>
       <Route path='/properties/:propertyId' element={<HomeDetailsPage/>}/>
       </Routes>
-      </ScrollToTop>
     </BrowserRouter>
   )
 }
