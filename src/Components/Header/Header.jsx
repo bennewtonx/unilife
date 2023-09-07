@@ -9,23 +9,6 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(true);
 
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: '20%',
-      bottom: '1%',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      height: '714px',
-      width: '936px',
-      borderRadius: '24px'
-    },
-    overlay: {
-      backgroundColor: 'rgba(1, 0, 0, 0.5)',
-    },
-  };
-
   return (
     <div className='header-container'>
       <div className='icon-logo'>
@@ -48,14 +31,13 @@ function Header() {
       <Modal
         isOpen={isOpen}
         onRequestClose={() => setIsOpen(false)}
-        style={customStyles}
         contentLabel="Contact Us Modal"
       >
         <div className='contact-us-modal-container'>
           <div className='contact-us-modal-title-container'>
             <div className='contact-us-modal-title'>
               <h2 style={{ fontWeight: '500', fontSize: '36px' }}>Contact Us</h2>
-              <p style={{ width: '485px', lineHeight: '32px' }}>Feel free to contact us if you have any questions. Looking forward to hearing from you.</p>
+              <p style={{lineHeight: '32px' }}>Feel free to contact us if you have any questions. Looking forward to hearing from you.</p>
             </div>
             <div>
               <MdPostAdd style={{ fontSize: '70px', color: 'rgba(58, 82, 149, 1)' }} />

@@ -50,7 +50,8 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  background-color: #00A2E1;
+  border: solid;
+  border-radius: 24px;
 }
 
 .contact-us-modal-title-container {
@@ -102,23 +103,33 @@
     display: none;
   }
 
+  .contact-us-modal-container{
+    height: 1084px;
+    width: 360px;
+    overflow: hidden;
+  }
   .contact-us-modal-title-container {
     width: 360px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin: 0 10px;
+  }
+
+  .contact-us-modal-title p{
+    width: 270px;
   }
 
   .contact-us-modal-input {
     height: 104px;
-    width: 400px;
+    width: 304px;
     margin-bottom: 24px;
     padding: 0 20px;
   }
 
   .contact-us-modal-input input {
     height: 56px;
-    width: 400px;
+    width: 304px;
     border-radius: 12px;
     border-color: rgba(206, 211, 216, 1);
     border-width: 0.5px;

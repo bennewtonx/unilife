@@ -12,9 +12,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.banner-search input{
+.banner-search input, .banner-city select{
     height: 48px;
-    width: 557px;
+    width: 282px;
     color: #CED3D8;
     font-size: 20px;
     text-indent: 3vh;
@@ -52,12 +52,6 @@
     width: 1279px;
     padding: 0 20px;
 }
-
-.banner-city input {
-    height: 48px;
-    width: 282px;
-}
-
 .banner-city h3 {
     text-align: start;
     margin: 0 0 10px 0;

@@ -14,28 +14,69 @@ function CityDetailsPage({ clickedCityName }) {
   const [specificCity, setSpecificCity] = useState([]);
   const [studentLife, setStudentLife] = useState('');
 
+  const [selectedBedroom, setSelectedBedroom] = useState('0');
+  const [selectedBathroom, setSelectedBathroom] = useState('0');
+  const [selectedPrice, setSelectedPrice] = useState('0');
+  const [selectedHomeType, setSelectedHomeType] = useState('0');
+  const [filters, setFilters] = useState({
+    query : {
+    city_id : cityId,
+    bedroom_count: selectedBedroom,
+    bathroom_count: selectedBathroom,
+    rent: selectedPrice,
+    property_type: selectedHomeType,
+    },
+  });
+
   useEffect(() => {
     // Call API to get data
     axios.get(`${import.meta.env.VITE_APP_BASE_URL}properties/city/${cityId}`)
-      .then(res => {
+      .then((res) => {
         setSpecificCity(res.data);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
 
     axios.get(`${import.meta.env.VITE_APP_BASE_URL}cities/${cityId}`)
-      .then(res => {
+      .then((res) => {
         setStudentLife(res.data.data[0]);
       })
-      .catch(err => console.log(err));
-  }, []);
+      .catch((err) => console.log(err));
+  }, [cityId]);
+
+  useEffect(() => {
+    // This will run whenever any of the filter values change
+    fetchFilters();
+  }, [filters]); // Include filters in the dependency array
+
+  const updateFilters = (newFilters) => {
+    setFilters(newFilters);
+  };
+
+  const fetchFilters = async () => {
+    try {
+      // Use the 'filters' state to make the API request
+      const res = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}properties/filter`, filters);
+      console.log(res.data);
+      // Update specificCity with filtered data
+      setSpecificCity(res.data);
+      console.log('is this working????')
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className='city-details-page-container'>
       <Header />
       <Banner page='properties/city/' />
-      <BannerSearch page='properties/city/'/>
+      {/* Pass the updateFilters function to BannerSearch */}
+      <BannerSearch page='properties/city/' filters={filters} updateFilters={updateFilters}
+              selectedBedroom={selectedBedroom}
+              selectedBathroom={selectedBathroom}
+              selectedPrice={selectedPrice}
+              selectedHomeType={selectedHomeType} />
       <div className='number-of-homes'>
-      <h1 style={{ marginLeft: '80px', marginBottom: '-10px' }}>{specificCity.total} homes in {specificCity.city_name}</h1>
+        <h1 style={{ marginLeft: '80px', marginBottom: '-10px' }}>{specificCity.total} homes in {specificCity.city_name}</h1>
       </div>
       <div className='property-container'>
         <PropertyCard specificCity={specificCity} />
