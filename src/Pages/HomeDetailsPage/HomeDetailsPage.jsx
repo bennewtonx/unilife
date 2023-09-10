@@ -1,6 +1,6 @@
 import './HomeDetailsPage.css';
 import React, { useEffect, useState } from 'react';
-import { MdOutlineBed, MdOutlineBathtub, MdCheck } from 'react-icons/md';
+import { MdOutlineBed, MdOutlineBathtub, MdCheck, MdOutlineAddHomeWork } from 'react-icons/md';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import Modal from 'react-modal';
 import { useParams, Link } from 'react-router-dom';
@@ -25,8 +25,8 @@ function HomeDetailsPage({ clickedCityName }) {
       bottom: '1%',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      height: '634px',
-      width: '936px',
+      width: '70%',
+      height: '90%',
       borderRadius: '24px'
     },
     overlay: {
@@ -95,6 +95,7 @@ function HomeDetailsPage({ clickedCityName }) {
               <div className='property-buttons'>
                 <button className='property-shortlist'><IoMdHeartEmpty />Shortlist</button>
                 <button className='property-book' onClick={() => setIsOpen(true)}>Book Viewing</button>
+                </div>
                 <Modal
                   isOpen={isOpen}
                   onRequestClose={() => setIsOpen(false)}
@@ -104,10 +105,11 @@ function HomeDetailsPage({ clickedCityName }) {
                   <div className='booking-modal-container'>
                     <div className='booking-modal-title-container'>
                       <div className='booking-modal-title'>
-                        <h2 style={{ fontWeight: '500', fontSize: '36px' }}>Book a Viewing</h2>
-                        <p style={{ width: '485px', lineHeight: '32px' }}>{property.address.street}, {property.address.city}, {property.address.postcode}</p>
+                        <h1 style={{ fontWeight: '500' }}>Book a Viewing</h1>
+                        <h3 style={{ width: '485px', lineHeight: '32px' }}>{property.address.street}, {property.address.city}, {property.address.postcode}</h3>
                       </div>
                       <div>
+                        < MdOutlineAddHomeWork style={{ fontSize: '70px', color: 'rgba(58, 82, 149, 1)' }}/>
                       </div>
                     </div>
                     <div className='booking-modal-input-left'>
@@ -137,7 +139,6 @@ function HomeDetailsPage({ clickedCityName }) {
                     </div>
                   </div>
                 </Modal>
-              </div>
             </div>
             </div>
             <div className='home-description-bedrooms-container'>

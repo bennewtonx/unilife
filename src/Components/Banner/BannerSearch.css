@@ -76,6 +76,21 @@
         font-size: 2vh;
         width: 20%;
     }
+
+    .banner-city {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 20px 25px;
+        height: 161px;
+        width: 667px;
+    }
+
+    .banner-city input {
+        height: 48px;
+        width: 282px;
+    }
   }
 
   @media (max-width: 600px) {

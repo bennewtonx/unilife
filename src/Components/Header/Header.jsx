@@ -9,6 +9,26 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(true);
 
+  const contactUsCustomStyles = {
+    content: {
+      top: '55%',
+      left: '50%',
+      right: '20%',
+      bottom: '1%',
+      marginRight: '-50%',
+      width: '70%',
+      height: '90%',
+      backgroundColor: 'transparent',
+      border: 'none',
+      transform: 'translate(-50%, -50%)',
+      
+    },
+    overlay:{
+      backgroundColor: "rgba(1,0,0,0.5)"
+  
+    }
+  };
+
   return (
     <div className='header-container'>
       <div className='icon-logo'>
@@ -31,6 +51,7 @@ function Header() {
       <Modal
         isOpen={isOpen}
         onRequestClose={() => setIsOpen(false)}
+        style={contactUsCustomStyles}
         contentLabel="Contact Us Modal"
       >
         <div className='contact-us-modal-container'>

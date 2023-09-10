@@ -15,7 +15,7 @@
   }
   
   .student-in-city-text {
-    height: 360px;
+    height: fit-content;
     width: 520px;
   }
   
@@ -31,7 +31,7 @@
   }
   
   /* Media query for tablets */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     .student-in-city {
       width: 90%; /* Adjust width for tablets */
       margin: 80px auto; /* Center-align the section */
@@ -43,7 +43,6 @@
   
     .student-in-city-text {
       width: 80%; /* Adjust width for tablets */
-      height: auto;
       text-align: center; /* Center-align text */
     }
   

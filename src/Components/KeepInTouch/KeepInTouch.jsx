@@ -15,15 +15,15 @@ function KeepInTouch() {
         <h1>Lets socialize</h1>
         <div className='social-icon'>
           <BiLogoFacebookCircle size={29} color={"#FFFFFF"}/>
-          <p>Facebook</p>
+          <a href="https://en-gb.facebook.com/">Facebook</a>
         </div>
         <div className='social-icon'>
           <BiLogoTwitter size={29} color={"#FFFFFF"}/>
-          <p>Twitter</p>
+          <a href="https://twitter.com/?lang=en">Twitter</a>
         </div>
         <div className='social-icon'>
           <BiLogoInstagramAlt size={29} color={"#FFFFFF"}/>
-          <p>Instagram</p>
+          <a href="https://www.instagram.com/">Instagram</a>
         </div>
         </div>
     </div>
