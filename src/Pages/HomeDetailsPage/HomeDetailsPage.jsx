@@ -1,7 +1,7 @@
 import './HomeDetailsPage.css';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { MdOutlineBed, MdOutlineBathtub, MdCheck, MdOutlineAddHomeWork } from 'react-icons/md';
-import { IoMdHeartEmpty } from 'react-icons/io';
+import { IoMdHeartEmpty, IoMdHeart } from 'react-icons/io';
 import Modal from 'react-modal';
 import { useParams, Link } from 'react-router-dom';
 import Header from './../../Components/Header/Header';
@@ -9,6 +9,7 @@ import KeepInTouch from './../../Components/KeepInTouch/KeepInTouch';
 import Footer from './../../Components/Footer/Footer';
 
 import axios from 'axios'
+import { ShortlistContext } from '../../Contexts/Shortlist';
 
 function HomeDetailsPage({ clickedCityName }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,16 @@ function HomeDetailsPage({ clickedCityName }) {
   const [property, setProperty] = useState([])
   const [specificCity, setSpecificCity] = useState([]);
   const { propertyId } = useParams()
+  const [isShortlist, setIsShortlist] = useState(false);
+  const { shortlist, addShortlist, removeShortlist } = useContext(ShortlistContext);
+
+  useEffect(()=>{
+    setIsShortlist(shortlist.find(item => item.id === property.id));
+  }, [shortlist, property]);
+
+  useEffect(()=>{
+    console.log(isShortlist);
+  }, [isShortlist]);
 
   const customStyles = {
     content: {
@@ -93,7 +104,13 @@ function HomeDetailsPage({ clickedCityName }) {
                 </div>
               </div>
               <div className='property-buttons'>
-                <button className='property-shortlist'><IoMdHeartEmpty />Shortlist</button>
+                {
+                  isShortlist ?
+                  <button className='property-shortlist' onClick={() => removeShortlist(property)}><IoMdHeart />Shortlist</button>
+                  :
+                  <button className='property-shortlist' onClick={() => addShortlist(property)}><IoMdHeartEmpty />Shortlist</button>
+
+                }
                 <button className='property-book' onClick={() => setIsOpen(true)}>Book Viewing</button>
                 </div>
                 <Modal

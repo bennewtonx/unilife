@@ -5,6 +5,7 @@ import SeeAllCitiesPage from './Pages/SeeAllCitiesPage/SeeAllCitiesPage'
 import ScrollToTop from './Contexts/ScrollToTop'
 import CityDetailsPage from './Pages/CityDetailsPage/CityDetailsPage';
 import HomeDetailsPage from './Pages/HomeDetailsPage/HomeDetailsPage'
+import ShortlistContextProvider from './Contexts/Shortlist';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <BrowserRouter>
     <ScrollToTop/>
+    <ShortlistContextProvider>
     <Routes>
       
       <Route path='/' element={<Homepage/>}/>
@@ -19,6 +21,7 @@ function App() {
       <Route path='/properties/city/:cityId' element={<CityDetailsPage/>}/>
       <Route path='/properties/:propertyId' element={<HomeDetailsPage/>}/>
       </Routes>
+      </ShortlistContextProvider>
     </BrowserRouter>
   )
 }
